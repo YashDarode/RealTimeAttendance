@@ -18,8 +18,8 @@ app.secret_key = 'your_secret_key'
 # Firebase initialization
 cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': "https://realtimeattendance-9e173-default-rtdb.firebaseio.com/",
-    'storageBucket': "realtimeattendance-9e173.appspot.com"
+    'databaseURL': "",
+    'storageBucket': ""
 })
 
 bucket = storage.bucket()
