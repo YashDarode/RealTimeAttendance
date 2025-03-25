@@ -16,10 +16,10 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 # Firebase initialization
-cred = credentials.Certificate("serviceAccountKey.json")
+cred = credentials.Certificate("serviceAccountKey.son")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': "",
-    'storageBucket': ""
+    'databaseURL': "https://your-project-id.firebaseio.com/",
+    'storageBucket': "your-project-id.appspot.com"
 })
 
 bucket = storage.bucket()
