@@ -12,8 +12,8 @@ from datetime import datetime
 
 cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': "https://realtimeattendance-9e173-default-rtdb.firebaseio.com/",
-    'storageBucket': "realtimeattendance-9e173.appspot.com"
+   'databaseURL': "https://your-project-id.firebaseio.com/",
+    'storageBucket': "your-project-id.appspot.com"
 })
 
 bucket = storage.bucket()
