@@ -2,6 +2,5 @@ __pycache__/
 venv/
 *.pyc
 *.pyo
-instance/
-serviceAccountKey.json  # IMPORTANT: Don't upload Firebase credentials!
+
 /serviceAccountKey.json
