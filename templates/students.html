@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='student.css') }}">
+</head>
+<body>
+    <h1>Students List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Total Attendance</th>
+                <th>Last Attendance Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if students %}
+                {% for student_id, student in students.items() %}
+                <tr>
+                    <td>{{ student_id }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.age }}</td>
+                    <td>{{ student.total_attendance }}</td>
+                    <td>{{ student.last_attendance_time }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="5">No students available</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    <!-- Button to add new student -->
+    <a href="{{ url_for('add_student') }}">
+        <button>Add New Student</button>
+    </a>
+</body>
+</html>

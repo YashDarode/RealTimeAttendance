@@ -1,0 +1,297 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.video-link {
+    background-color: #7B00FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.get-started-btn {
+    background-color: white; /* Button background color */
+    color: white; /* Text color */
+    padding: 12px 24px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Change cursor to pointer when hovering */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.get-started-btn:hover {
+    background-color: white; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.get-started-btn:active {
+    background-color: #white; /* Even darker shade when clicked */
+    transform: scale(0.98); /* Slightly scale down when clicked */
+}
+
+.login-btn {
+    background-color: #FF7B00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px 0px 50px;
+    background-color: #6200CC;
+    color: white;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+/* styles.css */
+
+/* Styling for the hero image container */
+
+/* Styling for the image itself */
+.hero-image img {
+    max-width: 600px;             /* Ensure the image doesn't overflow the container */
+    height: 650px;                /* Keep the aspect ratio */
+    border-radius: 0px;         /* Slightly rounded image edges */
+    object-fit: cover;           /* Ensures the image covers the container without stretching */
+     /* Add smooth transition on hover */
+}
+
+/* Add a hover effect for the image */
+
+
+.features-section {
+    width: 1650px; /* Set the section width */
+    height: 900px; /* Set the section height */
+    overflow: hidden; /* Prevent overflow */
+    padding: 20px; /* Add padding around the section */
+    box-sizing: border-box; /* Include padding in width and height */
+    background-color: #f4f4f4; /* Optional: Set a background color */
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Make container full height */
+}
+
+.features-row {
+    display: flex;
+    justify-content: space-between; /* Space between feature boxes */
+    margin-bottom: 20px;
+    width: 100%; /* Ensure the row takes the full width */
+}
+
+.feature-box {
+    width: 30%; /* Adjust this to control box size */
+    text-align: center;
+    padding: 10px; /* Adds padding inside each feature box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s; /* Adds a transition effect for hover */
+    box-sizing: border-box; /* Include padding in width */
+    max-height: 300px; /* Set a maximum height for feature boxes */
+}
+
+.feature-box:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.feature-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Adds space between image and text */
+    max-height: 150px; /* Set a maximum height for images */
+}
+
+.but{
+  background-color: #FF7B00;
+}
+.about-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.team-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.team-list li {
+    margin: 10px 0; /* Space between team members */
+}
+
+.progress-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Arrange items vertically */
+    margin-top: 30px; /* Space above the progress map */
+}
+
+.progress-point {
+    display: flex;
+    flex-direction: column; /* Arrange circle and text vertically */
+    align-items: center;
+}
+
+.circle {
+    width: 30px; /* Circle size */
+    height: 30px; /* Circle size */
+    border-radius: 50%; /* Make it round */
+    background-color: #FF7B00; /* Circle color */
+    color: white; /* Text color */
+    display: flex; /* Center text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-weight: bold; /* Make it bold */
+}
+
+.progress-line {
+    height: 2px; /* Line thickness */
+    background-color: #FF7B00; /* Line color */
+    width: 2px; /* Minimal width */
+    flex-grow: 1; /* Makes line take available space */
+    margin: 0 10px; /* Space between points */
+}
+
+.contact-section {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+    max-width: 1600px;
+    margin: 0 auto; /* Center the section on the page */
+    height: 800px; /* Set fixed height */
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    margin: 20px 0;
+}
+
+.contact-details h3 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.contact-details p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between social icons */
+    margin-top: 10px; /* Space above social media icons */
+}
+
+.social-icon {
+    width: 40px; /* Size of social icons */
+    height: auto;
+}
+.contact-form {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Spacing inside the form */
+    max-width: 400px; /* Max width for the form */
+    max-height: 400px; /* Max height for the form */
+    overflow: auto; /* Allow scrolling if content exceeds size */
+    text-align: center; /* Center text inside the form */
+     margin-left: 37%;
+}
+
+
+.contact-form h3 {
+    font-size: 1.5em; /* Slightly smaller heading size */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #333; /* Dark text color */
+}
+
+.form-group {
+    margin-bottom: 10px; /* Space below each input group */
+}
+
+.form-group label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Make labels bold */
+    color: #555; /* Lighter text color */
+    font-size: 0.9em; /* Smaller font size for labels */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width */
+    padding: 8px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 0.9em; /* Slightly smaller font size */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #FF7B00; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.submit-btn {
+    background-color: #FF7B00; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 8px 10px; /* Adjusted padding for smaller button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    width: 100%; /* Full width for button */
+}
+
+.submit-btn:hover {
+    background-color: #e76e00; /* Darker shade on hover */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}

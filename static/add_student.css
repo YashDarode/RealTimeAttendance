@@ -1,0 +1,66 @@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark gray text color */
+            margin: 0;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #7B00FF; /* Purple header */
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: white; /* White background for the form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            max-width: 500px; /* Set max width */
+            margin: auto; /* Center the form */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px; /* Space above and below labels */
+            font-weight: bold; /* Bold text for labels */
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%; /* Full width inputs */
+            padding: 10px;
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 4px; /* Rounded corners */
+            margin-bottom: 15px; /* Space below inputs */
+            font-size: 16px; /* Font size for inputs */
+        }
+
+        button {
+            background-color: #7B00FF; /* Purple button background */
+            color: white; /* White text */
+            border: none; /* No border */
+            padding: 10px 15px;
+            cursor: pointer; /* Pointer cursor */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size for buttons */
+            margin: 10px 0; /* Space above and below buttons */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        button:hover {
+            background-color: #FF5722; /* Orange on hover */
+        }
+
+        a {
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        /* Styling for back button */
+        .back-button {
+            display: block; /* Display as block */
+            text-align: center; /* Center align */
+        }
+    </style>

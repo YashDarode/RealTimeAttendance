@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Attendance System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Face Attendance</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="login-btn">Admin Login</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Revolutionize Attendance Management with AI-Powered Face Recognition</h1>
+        <p>Say goodbye to traditional methods of attendance tracking. Our advanced face recognition system leverages cutting-edge AI technology to offer an effortless, accurate, and secure solution. Whether for schools, universities, or workplaces, streamline your attendance process with unmatched precision and ease.</p>
+        <p>Designed to enhance efficiency, our system ensures quick verification in real-time, reducing the chances of manual errors and preventing misuse. Join the future of attendance tracking and transform the way you manage your team or students.</p>
+        <button class="get-started-btn">Get Started Now</button>
+    </div>
+    <div class="hero-image">
+        <img src="assests/face-recognition.png" alt="AI-Powered Face Recognition System">
+    </div>
+</section>
+
+
+    <!-- Features Section -->
+<section id="features" class="features-section">
+    <h2>Key Features</h2>
+    <div class="features-container">
+        <div class="feature-box">
+            <img src="assests/secure.png" alt="Secure Attendance">
+            <h3>Accurate Attendance</h3>
+            <p>Uses advanced face recognition algorithms to ensure accurate attendance tracking.</p>
+        </div>
+        <div class="feature-box">
+            <img src="assests/easy.png" alt="Easy Setup">
+            <h3>Easy Setup</h3>
+            <p>Quickly integrate the system into your workplace or institution with ease.</p>
+        </div>
+        <div class="feature-box">
+            <img src="assests/cloud.png" alt="Cloud Integration">
+            <h3>Cloud-Based</h3>
+            <p>All attendance data is stored securely in the cloud for real-time access and updates.</p>
+        </div>
+        <div class="feature-box">
+            <img src="assests/latency.png" alt="Low Latency">
+            <h3>Low Latency</h3>
+            <p>Experience lightning-fast recognition and attendance updates, minimizing delays in your workflow.</p>
+        </div>
+        <div class="feature-box">
+            <img src="assests/firebase.png" alt="Firebase Integration">
+            <h3>Firebase Integration</h3>
+            <p>Powered by Firebase, our system ensures secure and scalable database management.</p>
+        </div>
+        <div class="feature-box">
+            <img src="assests/add-student.png" alt="Add Student Feature">
+            <h3>Effortless Student Addition</h3>
+            <p>Easily add new students to the system with a simple interface, streamlining the onboarding process.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Our System</h2>
+        <p>Our Face Recognition Attendance System leverages cutting-edge AI technology to streamline attendance management. Designed for schools, offices, and institutions, it ensures accurate and secure attendance records in real-time.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to integrate our system, feel free to contact us below:</p>
+        <form action="#">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Face Recognition Attendance System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector(".get-started-btn").addEventListener("click", function() {
+            window.location.href = "/video_feed";
+        });
+    </script>
+</body>
+</html>

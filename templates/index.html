@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Face Attendance</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/video_feed" target="_blank" class="video-link">Live Video Feed</a></li>
+            </ul>
+             <div class="button-container">
+        <a href="{{ url_for('admin_login') }}">
+            <button class="login-btn">Admin Login</button>
+        </a>
+    </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Revolutionize Attendance Management with AI-Powered Face Recognition</h1>
+        <p>Say goodbye to traditional methods of attendance tracking. Our advanced face recognition system leverages cutting-edge AI technology to offer an effortless, accurate, and secure solution. Whether for schools, universities, or workplaces, streamline your attendance process with unmatched precision and ease.</p>
+        <p>Designed to enhance efficiency, our system ensures quick verification in real-time, reducing the chances of manual errors and preventing misuse. Join the future of attendance tracking and transform the way you manage your team or students.</p>
+
+        <button class="get-started-btn"><a href="/video_feed" target="_blank" >Get Started Now</a></button>
+    </div>
+    <div class="hero-image">
+        <img src="static/assests/face-recognition.png" alt="AI-Powered Face Recognition System">
+    </div>
+</section>
+
+    <!-- Features Section -->
+<section id="features" class="features-section">
+    <h2>Key Features</h2>
+    <div class="features-container">
+
+        <!-- First Row -->
+        <div class="features-row">
+            <div class="feature-box">
+                <img src="{{ url_for('static', filename='assests/secure.png') }}" alt="Secure Attendance" class="feature-image">
+                <h3>Accurate Attendance</h3>
+                <p>Uses advanced face recognition algorithms to ensure accurate attendance tracking.</p>
+            </div>
+            <div class="feature-box">
+                <img src="{{ url_for('static', filename='assests/easy.png') }}" alt="Easy Setup" class="feature-image">
+                <h3>Easy Setup</h3>
+                <p>Quickly integrate the system into your workplace or institution with ease.</p>
+            </div>
+            <div class="feature-box">
+                <img src="{{ url_for('static', filename='assests/cloud.png') }}" alt="Cloud Integration" class="feature-image">
+                <h3>Cloud-Based</h3>
+                <p>All attendance data is stored securely in the cloud for easy access and management.</p>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="features-row">
+            <div class="feature-box">
+                <img src="{{ url_for('static', filename='assests/latency.png') }}" alt="Low Latency" class="feature-image">
+                <h3>Low Latency</h3>
+                <p>Experience fast and seamless attendance updates with minimal delays, ensuring smooth operations.</p>
+            </div>
+            <div class="feature-box">
+                <img src="{{ url_for('static', filename='assests/firebase.png') }}" alt="Firebase Integration" class="feature-image">
+                <h3>Firebase Integration</h3>
+                <p>Built on Firebase for secure and scalable database management with real-time updates.</p>
+            </div>
+            <div class="feature-box">
+                <img src="{{ url_for('static', filename='assests/add-student.png') }}" alt="Add Student Feature" class="feature-image">
+                <h3>Effortless Student Addition</h3>
+                <p>Easily add new students to the system with a user-friendly interface, enhancing flexibility.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <!-- About Section -->
+<section id="about" class="about-section">
+    <h2>About Us</h2>
+    <p>We are a team of dedicated developers committed to revolutionizing attendance tracking through innovative technology.</p>
+
+    <h3>Our Team</h3>
+    <ul class="team-list">
+        <li><strong>Vikrant Ramchandra Gawade</strong> - C50</li>
+        <li><strong>Yash Hemant Darode</strong> - C55</li>
+        <li><strong>Yash Keshav Bhatkar</strong> - C56</li>
+    </ul>
+
+    <h3>Project Progress</h3>
+    <div class="progress-map">
+        <div class="progress-point">
+            <div class="circle">1</div>
+            <p>Research & Development</p>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-point">
+            <div class="circle">2</div>
+            <p>System Design</p>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-point">
+            <div class="circle">3</div>
+            <p>Implementation</p>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-point">
+            <div class="circle">4</div>
+            <p>Testing</p>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-point">
+            <div class="circle">5</div>
+            <p>Deployment</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>If you have any inquiries or need assistance, feel free to reach out to us using the contact details below or fill out the form. We would love to hear from you!</p>
+
+    <div class="contact-details">
+        <h3>Email Us</h3>
+        <p>You can also reach us at: <a href="mailto:info@faceattendance.com">info@faceattendance.com</a></p>
+
+        <h3>Follow Us</h3>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" class="social-icon"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+
+   <div class="contact-form">
+    <h3>Get in Touch</h3>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send</button>
+    </form>
+</div>
+
+</section>
+
+    <footer>
+        <p>&copy; 2024 Face Attendance. All rights reserved.</p>
+    </footer>
+</body>
+</html>
