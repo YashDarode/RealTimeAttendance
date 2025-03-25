@@ -7,10 +7,10 @@ from firebase_admin import credentials
 from firebase_admin import db
 from firebase_admin import  storage
 
-cred = credentials.Certificate("serviceAccountKey.json")
+cred = credentials.Certificate("serviceAcccountKey.json")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': "https://realtimeattendance-9e173-default-rtdb.firebaseio.com/",
-    'storageBucket': "realtimeattendance-9e173.appspot.com"
+   'databaseURL': "https://your-project-id.firebaseio.com/",
+    'storageBucket': "your-project-id.appspot.com"
 })
 
 
