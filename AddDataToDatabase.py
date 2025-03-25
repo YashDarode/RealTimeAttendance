@@ -2,10 +2,10 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate("serviceAccountKey.json")
+cred = credentials.Certificate("servicecountKey.json")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': "https://realtimeattendance-9e173-default-rtdb.firebaseio.com/"
-})
+    'databaseURL': "https://your-project-id.firebaseio.com/",
+    
 
 ref = db.reference('Students')
 
