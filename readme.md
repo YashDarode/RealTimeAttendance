@@ -1,66 +1,111 @@
-# **Real-Time Attendance System Using Face Recognition**
+# Real-Time Attendance System using Face Recognition
 
-This is a real-time **Face Recognition Attendance System** built with **Flask, OpenCV, Firebase, and Face Recognition API**. It captures live video, detects faces, and updates attendance records in a Firebase database.
+## Overview
+This project is a **real-time attendance system** that uses **face recognition** technology to mark attendance automatically. It is built using **Flask, OpenCV, Firebase, and Face Recognition libraries**.
 
-## **🚀 Features**
-- **Live Video Streaming** 📷 using OpenCV
-- **Face Recognition** 🤖 with `face_recognition` library
-- **Firebase Integration** 🔥 for real-time attendance storage
-- **Admin Dashboard** 🛠️ to manage students
-- **Automatic Attendance Marking** ⏳ with timestamp tracking
+## Features
+- **Live face recognition** for attendance marking
+- **Flask-based web interface** for administrators
+- **Firebase Realtime Database** for storing attendance records
+- **Firebase Storage** for storing student images
+- **Admin authentication** for managing student records
 
----
+## Tech Stack
+- **Backend:** Flask, Firebase Admin SDK
+- **Frontend:** HTML, CSS, JavaScript (Jinja2 for templating)
+- **Machine Learning:** OpenCV, Face Recognition, NumPy
+- **Database:** Firebase Realtime Database
+- **Storage:** Firebase Cloud Storage
 
-## **🛠️ Installation & Setup**
+## Installation
+### Prerequisites
+Ensure you have the following installed:
+- Python 3.8+
+- Pip
+- Virtual Environment (optional but recommended)
 
-### **🔹 1. Clone the Repository**
-```sh
-git clone https://github.com/YOUR_USERNAME/flask-attendance-system.git
-cd flask-attendance-system
-```
-
-### **🔹 2. Install Dependencies**
-```sh
-pip install -r requirements.txt
-```
-
-### **🔹 3. Set Up Firebase**
-1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Create a new project & enable **Realtime Database**
-3. Download the `serviceAccountKey.json` file
-4. Place it inside your project folder
-
-### **🔹 4. Run the Application**
-```sh
-python app.py
-```
-The server will start on **http://127.0.0.1:5000/**
-
----
-
-## **📡 Deployment on Render**
-
-### **1️⃣ Push Your Code to GitHub**
-```sh
-git add .
-git commit -m "Deploying to Render"
-git push origin main
-```
-
-### **2️⃣ Deploy on Render**
-1. Go to [Render](https://render.com/)
-2. Click **New Web Service**
-3. Connect your GitHub repository
-4. Use this **start command**:
+### Steps
+1. **Clone the repository:**
    ```sh
-   gunicorn app:app
+   git clone https://github.com/yourusername/realtime-attendance.git
+   cd realtime-attendance
    ```
-5. Click **Deploy** 🎉
+
+2. **Create and activate a virtual environment (optional but recommended):**
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # For Linux/macOS
+   venv\Scripts\activate  # For Windows
+   ```
+
+3. **Install dependencies:**
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+4. **Setup Firebase:**
+   - Get your `serviceAccountKey.json` from Firebase and place it in the project root.
+   - Update `databaseURL` and `storageBucket` in `app.py` with your Firebase project details.
+
+5. **Run the application:**
+   ```sh
+   python app.py
+   ```
+
+6. **Access the web app:**
+   Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
+
+## Deployment (Using Render)
+1. **Create a GitHub repository and push your code.**
+2. **Go to [Render](https://render.com/) and create a new Web Service.**
+3. **Select your GitHub repository.**
+4. **Set environment variables in Render:**
+   - `FIREBASE_CREDENTIALS`: Convert your `serviceAccountKey.json` into a single-line string and store it in Render’s environment variables.
+   - `DATABASE_URL`: Your Firebase database URL.
+5. **Set the build and start command:**
+   - **Build Command:**
+     ```sh
+     pip install -r requirements.txt
+     ```
+   - **Start Command:**
+     ```sh
+     gunicorn app:app
+     ```
+6. **Deploy and access your app via the Render-provided URL.**
+
+## Known Issues and Fixes
+### **1. WebCam Access on Render**
+- Render does not support hardware access like `cv2.VideoCapture(0)`.
+- **Fix:** Modify the code to use pre-uploaded images instead.
+
+### **2. Asyncio Errors**
+- Render might not handle `asyncio.run()` properly.
+- **Fix:** Replace `asyncio.run()` with threading:
+  ```python
+  import threading
+  def async_update_attendance(student_id):
+      threading.Thread(target=update_attendance, args=(student_id,)).start()
+  ```
+
+### **3. Firebase File Upload Issues**
+- Ensure Firebase Storage is properly configured.
+- **Fix:** Use bucket blobs correctly:
+  ```python
+  blob = bucket.blob(f'Images/{file_name}')
+  blob.upload_from_filename(img_path)
+  ```
+
+## Future Improvements
+- Implement **face anti-spoofing** to prevent misuse with printed/static photos.
+- Add **email notifications** for low attendance.
+- Improve **UI/UX** for better user experience.
+
+## License
+This project is **open-source** under the **MIT License**.
+
+## Author
+Developed by **Yash Darode** and team.
 
 ---
-
-## **📜 License**
-This project is **open-source** and free to use under the MIT License.
-
-🚀 Happy Coding!
+Enjoy using the Real-Time Attendance System! 🚀
 
